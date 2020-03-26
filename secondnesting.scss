@@ -1,0 +1,42 @@
+$color: red;
+
+.section {
+    font-size: 15px;
+
+    ul {
+        color: $color;
+    }
+}
+
+.grid {
+    background-color: $color;
+    display: grid;
+    padding: 15px;
+    grid-column-gap: 15px;
+    grid-row-gap: 8px;
+    grid-template-columns: auto auto auto;
+}
+
+%message {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 15px;
+    margin: 15px;
+}
+
+.likely {
+    @extend %message;
+    background-color: green;
+}
+
+.moderate {
+    @extend %message;
+    background-color: orange;
+}
+
+.unlikely {
+    @extend %message;
+    background-color: red;
+}
